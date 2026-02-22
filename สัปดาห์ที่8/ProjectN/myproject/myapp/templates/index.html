@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}<title>หน้าแรกของเว็บไซต์</title>{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="p-5 mb-4 bg-primary text-white rounded-3">
+  <div class="container-fluid py-3">
+    <h1 class="display-5 fw-bold"><i class="bi bi-laptop me-2"></i>ICT12367 SPU</h1>
+    <p class="col-md-8 fs-5">
+      ยินดีต้อนรับสู่เว็บไซต์โปรเจค สาขาเทคโนโลยีสารสนเทศและการสื่อสาร มหาวิทยาลัยศรีปทุม
+    </p>
+    <a href="/about" class="btn btn-outline-light btn-lg mt-2">
+      <i class="bi bi-arrow-right-circle me-1"></i>เรียนรู้เพิ่มเติม
+    </a>
+  </div>
+</div>
+
+<!-- Feature Cards -->
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card h-100 border-primary">
+      <div class="card-body text-center">
+        <i class="bi bi-code-slash text-primary" style="font-size: 2.5rem;"></i>
+        <h5 class="card-title mt-3">พัฒนาเว็บไซต์</h5>
+        <p class="card-text">เรียนรู้การพัฒนาเว็บไซต์ด้วย Django Framework ตั้งแต่พื้นฐานจนถึงระดับสูง</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 border-success">
+      <div class="card-body text-center">
+        <i class="bi bi-database text-success" style="font-size: 2.5rem;"></i>
+        <h5 class="card-title mt-3">ฐานข้อมูล</h5>
+        <p class="card-text">จัดการฐานข้อมูลอย่างมีประสิทธิภาพผ่าน Django ORM และ SQLite</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 border-warning">
+      <div class="card-body text-center">
+        <i class="bi bi-palette text-warning" style="font-size: 2.5rem;"></i>
+        <h5 class="card-title mt-3">ออกแบบ UI</h5>
+        <p class="card-text">ออกแบบหน้าเว็บให้สวยงามและตอบสนองทุกอุปกรณ์ด้วย Bootstrap 5</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
