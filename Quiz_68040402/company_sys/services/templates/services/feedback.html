@@ -1,0 +1,58 @@
+{% extends 'services/base.html' %}
+
+{% block title %}ข้อเสนอแนะ - บริษัท ศุมปะที จำกัด{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">📝 แบบฟอร์มข้อเสนอแนะ</h1>
+<p class="text-center text-muted">กรุณาแสดงความคิดเห็นหรือข้อเสนอแนะของคุณ</p>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <form id="feedbackForm">
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label">ชื่อ-นามสกุล</label>
+                        <input type="text" class="form-control" id="customerName" placeholder="กรอกชื่อ-นามสกุล" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customerEmail" class="form-label">อีเมล</label>
+                        <input type="email" class="form-control" id="customerEmail" placeholder="กรอกอีเมล" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="feedbackMessage" class="form-label">ข้อความร้องเรียน / ข้อเสนอแนะ</label>
+                        <textarea class="form-control" id="feedbackMessage" rows="5" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                        <div class="text-muted mt-1">
+                            จำนวนตัวอักษร: <span id="charCount">0</span> ตัว
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">ส่งข้อเสนอแนะ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    const charCount = document.getElementById('charCount');
+
+    feedbackMessage.addEventListener('input', function () {
+        const currentLength = feedbackMessage.value.length;
+        charCount.textContent = currentLength;
+    });
+
+    const feedbackForm = document.getElementById('feedbackForm');
+    feedbackForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('ขอบคุณสำหรับข้อเสนอแนะของคุณ!');
+        feedbackForm.reset();
+        charCount.textContent = '0';
+    });
+</script>
+{% endblock %}

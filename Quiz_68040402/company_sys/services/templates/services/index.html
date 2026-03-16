@@ -1,0 +1,14 @@
+{% extends 'services/base.html' %}
+
+{% block title %}หน้าแรก - บริษัท ศุมปะที จำกัด{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>🏢 ยินดีต้อนรับสู่ บริษัท ศุมปะที จำกัด</h1>
+    <p class="lead mt-3">ผู้นำด้านสินค้าเทคโนโลยีและอุปกรณ์อิเล็กทรอนิกส์คุณภาพสูง</p>
+    <hr>
+    <p>สำรวจสินค้าของเราหรือส่งข้อเสนอแนะของคุณผ่านทางเว็บไซต์ได้เลย</p>
+    <a href="{% url 'products' %}" class="btn btn-primary btn-lg me-2">🛍️ ดูสินค้า</a>
+    <a href="{% url 'feedback' %}" class="btn btn-outline-secondary btn-lg">📝 ข้อเสนอแนะ</a>
+</div>
+{% endblock %}
