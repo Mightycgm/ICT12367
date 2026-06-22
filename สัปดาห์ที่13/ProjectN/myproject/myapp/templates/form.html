@@ -1,16 +1,16 @@
-{% extends 'base.html' %}
-{% block title %}
+{% extends 'base.html' %} {% block title %}
 <title>แบบฟอร์มข้อมูลประชากร</title>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <div class="row justify-content-center">
   <div class="col-md-6 col-lg-5">
     <div class="card shadow">
       <!-- Header -->
       <div class="card-header bg-primary text-white text-center py-3">
-        <h4 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>แบบฟอร์มบันทึกข้อมูลประชากร</h4>
+        <h4 class="mb-0">
+          <i class="bi bi-person-lines-fill me-2"></i
+          >แบบฟอร์มบันทึกข้อมูลประชากร
+        </h4>
       </div>
       <!-- Body -->
       <div class="card-body p-4">
@@ -23,7 +23,8 @@
               class="form-control"
               id="fullname"
               name="fullname"
-              placeholder="กรุณากรอกชื่อ-นามสกุล" />
+              placeholder="กรุณากรอกชื่อ-นามสกุล"
+            />
           </div>
           <div class="mb-3">
             <label for="age" class="form-label fw-bold">อายุ</label>
@@ -32,7 +33,8 @@
               class="form-control"
               id="age"
               name="age"
-              placeholder="กรอกข้อมูลอายุเป็นตัวเลข" />
+              placeholder="กรอกข้อมูลอายุเป็นตัวเลข"
+            />
           </div>
           <div class="d-flex gap-2 mt-4">
             <button type="submit" class="btn btn-success">
